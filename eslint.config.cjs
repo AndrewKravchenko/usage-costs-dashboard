@@ -12,25 +12,32 @@ module.exports = [
       },
       globals: {
         ...require('globals').browser,
-        "__dirname": true
+        __dirname: true,
       },
     },
     plugins: {
       '@typescript-eslint': require('@typescript-eslint/eslint-plugin'),
       'react-hooks': require('eslint-plugin-react-hooks'),
       'react-refresh': require('eslint-plugin-react-refresh'),
-      prettier: require('eslint-plugin-prettier'),
+      'prettier': require('eslint-plugin-prettier'),
     },
     rules: {
       ...require('@eslint/js').configs.recommended.rules,
       ...require('eslint-plugin-react-hooks').configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/explicit-function-return-type': 'off',
       'prettier/prettier': ['error', { endOfLine: 'auto' }],
+      'no-unused-vars': [
+        'error',
+        {
+          vars: 'all',
+          args: 'none',
+          caughtErrors: 'all',
+          ignoreRestSiblings: false,
+          reportUsedIgnorePattern: false,
+        },
+      ],
     },
   },
-];
+]

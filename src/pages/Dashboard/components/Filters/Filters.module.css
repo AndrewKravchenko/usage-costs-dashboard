@@ -1,0 +1,30 @@
+.filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.filterItem {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background: #f9f9f9;
+    transition: border 0.2s;
+}
+
+select:focus {
+    border-color: var(--primary-color);
+}

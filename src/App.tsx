@@ -1,10 +1,16 @@
+import { Dashboard } from '@/pages/Dashboard/Dashboard.tsx'
+import { Footer, Header } from '@/components'
 import './App.css'
 
 function App() {
   return (
-    <>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </>
+    <div className="app-container">
+      <Header />
+      <main className="app-main">
+        <Dashboard />
+      </main>
+      <Footer />
+    </div>
   )
 }
 
